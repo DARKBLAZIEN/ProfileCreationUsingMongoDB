@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="w-full min-h-screen bg-zinc-900">
+        <div class="w-full pl-10 pt-10">
+            <h1 class="font-montserrat text-5xl text-white tracking-tighter mb-5">Profile Creation</h1>
+            <form class="mb-4 flex gap-2" action="/create" method="post">
+                <input name="name" placeholder="Your Name" type="text" class="text-white font-montserrat bg-zinc-800 p-3 rounded-lg">
+                <input name="email" placeholder="Email" type="text" class="text-white font-montserrat bg-zinc-800 p-3 rounded-lg">
+                <input name="image" placeholder="ImageURL" type="text" class="text-white font-montserrat bg-zinc-800 p-3 rounded-lg">
+                <input type="submit" value="Create Profile" class="bg-yellow-600 p-3 rounded-lg">
+            </form>
+            <a href="/users" class="text-sm text-blue-400 link-to-users " >All Users 🡪</a>
+        </div>
+    </div>
+</body>
+</html>
