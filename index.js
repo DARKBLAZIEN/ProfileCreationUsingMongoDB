@@ -33,4 +33,19 @@ app.get('/delete/:id', async (req,res)=>{
     res.redirect('/users')
 })
 
+app.get('/edit/:id', async (req,res)=>{
+    const user = await userModel.findOne({_id:req.params.id})
+    res.render('editpage',{userdata:user});
+})
+
+app.post('/editpage/:id', async (req,res)=>{
+    const user = await userModel.findOneAndUpdate({_id:req.params.id},{
+        name : req.body.name,
+        email : req.body.email,
+        imageURL : req.body.imageURL
+    },{new:true});
+
+    res.redirect('/users');
+})
+
 app.listen(3000)
