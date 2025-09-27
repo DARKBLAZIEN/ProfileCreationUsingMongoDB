@@ -8,7 +8,6 @@ app.set('view engine','ejs')
 app.use(express.static(path.join(__dirname,'public')))
 
 const userModel = require('./models/user')
-const user = require('./models/user')
 
 app.get('/', async (req,res)=>{
     res.render('index')
